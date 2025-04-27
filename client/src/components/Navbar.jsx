@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="hidden sm:flex items-center gap-8">
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/products'>All Products</NavLink>
-                <NavLink to='/'>Contact</NavLink>
+                <NavLink to='/contact'>Contact</NavLink>
 
                 <div onChange={(e) => setSearchQuery(e.target.value)} className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
                     <input className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products" />
@@ -77,7 +77,7 @@ const Navbar = () => {
                     {user &&
                         <NavLink to='/products' onClick={() => setOpen(false)}>My Orders</NavLink>
                     }
-                    <NavLink to='/' onClick={() => setOpen(false)}>Contact</NavLink>
+                    <NavLink to='/contact' onClick={() => setOpen(false)}>Contact</NavLink>
 
                     {!user ? (
                         <button onClick={() => {
